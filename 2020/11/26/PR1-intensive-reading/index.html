@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Minima -->
+  <!-- Hexo theme created by @adisaktijrs -->
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+
+  
+  <title>PR1-intensive reading</title>
+  
+  <link rel="canonical" href="http://example.com/2020/11/26/PR1-intensive-reading/">
+  
+  <meta name="description" content="Here I investigate some important issues before my intensive reading: RNA-SeqSNPsGWAS全基因组关联分析 （Genome wide association study，GWAS）是对多个个体在全基因组范围的遗传变异（标">
+  
+  
+  <meta name="keywords" content="Research, Science, Math, Life.">
+  
+  <meta name="author" content="AnnLoya">
+  
+  <meta property="og:image" content="http://example.comcapture.png">
+  
+  <meta property="og:site_name" content="Ann&#39;s blog" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="PR1-intensive reading" />
+  
+  <meta property="og:description" content="Here I investigate some important issues before my intensive reading: RNA-SeqSNPsGWAS全基因组关联分析 （Genome wide association study，GWAS）是对多个个体在全基因组范围的遗传变异（标">
+  
+  <meta property="og:url" content="http://example.com/2020/11/26/PR1-intensive-reading/" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PR1-intensive reading">
+  
+  <meta name="twitter:description" content="Here I investigate some important issues before my intensive reading: RNA-SeqSNPsGWAS全基因组关联分析 （Genome wide association study，GWAS）是对多个个体在全基因组范围的遗传变异（标">
+  
+  
+  <meta name="twitter:image" content="http://example.comcapture.png">
+  
+  <meta name="twitter:url" content="http://example.com/2020/11/26/PR1-intensive-reading/" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preload fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preload" href="../fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+<link rel="stylesheet" href="/css/normalize.css">
+
+  
+<link rel="stylesheet" href="/css/skeleton.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+<link rel="stylesheet" href="/css/prism-dark.css">
+
+  
+<link rel="stylesheet" href="/css/prism-line-numbers.css">
+
+  <!-- User css -->
+  
+  
+<link rel="stylesheet" href="/css/user.css">
+
+  
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- Custom Theme Color Style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+  a:not(.icon) {
+    text-decoration-color: #0FA0CE;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      #0FA0CE 50%
+    );
+  }
+  blockquote {
+    border-left: 8px solid #0FA0CE;
+  }
+  .nanobar .bar {
+    background: #0FA0CE;
+  }
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="submit"].button-primary:hover,
+  input[type="reset"].button-primary:hover,
+  input[type="button"].button-primary:hover,
+  .button.button-primary:focus,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:focus {
+    background-color: #0FA0CE;
+    border-color: #0FA0CE;
+  }
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #0FA0CE;
+  }
+</style>
+
+  <!-- Google Analytics (With Privacy Settings On)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+
+        <div class="row">
+  <div class="two columns" style="max-width: 50px">
+    <h1 class="mt-2 mode">
+      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
+      <script >
+        if (localStorage.getItem('preferredTheme') == 'dark') {
+          setDarkMode(true)
+        }
+        function setDarkMode(isDark) {
+          var darkBtn = document.getElementById('darkBtn')
+          var lightBtn = document.getElementById('lightBtn')
+          if (isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+            localStorage.setItem('preferredTheme', 'dark');
+          } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+            localStorage.removeItem('preferredTheme');
+          }
+          document.body.classList.toggle("darkmode");
+        }
+      </script>
+    </h1>
+  </div>
+
+  <div class="six columns ml-1">
+    <h1 class="mt-2">
+      Hello mates!
+    </h1>
+  </div>
+
+  <div class="twelve columns">
+    <div class="row">
+      <div class="nine columns left">
+        <a href="/">Home</a>
+        
+          
+          <a href="/Archives" class="ml">Archives</a>
+          
+        
+        
+          
+            <a href="mailto:luoying3@buaa.edu.cn" target="_blank" class="ml">Email</a>
+          
+        
+      </div>
+    </div>
+    <hr style="margin-bottom: 2.6rem">
+  </div>
+</div>
+
+        <div class="trans">
+            <h2>PR1-intensive reading</h2>
+
+  <p>Here I investigate some important issues before my intensive reading:</p>
+<h1 id="RNA-Seq"><a href="#RNA-Seq" class="headerlink" title="RNA-Seq"></a>RNA-Seq</h1><h1 id="SNPs"><a href="#SNPs" class="headerlink" title="SNPs"></a>SNPs</h1><h1 id="GWAS"><a href="#GWAS" class="headerlink" title="GWAS"></a>GWAS</h1><p>全基因组关联分析 （Genome wide association study，GWAS）是对多个个体在全基因组范围的遗传变异（标记）多态性进行检测，获得基因型，进而将基因型与可观测的性状，即表型，进行群体水平的统计学分析，根据统计量或显著性 p 值筛选出最有可能影响该性状的遗传变异（标记），挖掘与性状变异相关的基因。</p>
+<h1 id="eQTL"><a href="#eQTL" class="headerlink" title="eQTL"></a>eQTL</h1><p>首先QTL是数量性状位点，比如身高是一个数量性状，其对应的控制基因的位点就是一个数量性状位点，而eQTL就是控制数量性状表达位点，即能控制数量性状基因（如身高基因）表达水平高低的那些基因的位点。</p>
+<p>数量性状基因座：控制数量性状的基因在基因组中的位置称数量性状基因座。常利用DNA分子标记技术对这些区域进行定位，与连续变化的数量性状表型有密切关系</p>
+<p>表达数量性状基因座（expression Quantitative Trait Loci,eQTL）是对上述概念的进一步深化，它指的是染色体上一些能特定调控mRNA和蛋白质表达水平的区域，其mRNA/蛋白质的表达水平量与数量性状成比例关系。eQTL可分为顺式作用eQTL和反式作用eQTL，顺式作用eQTL就是某个基因的eQTL定位到该基因所在的基因组区域，表明可能是该基因本身的差别引起的mRNA水平变化；反式作用eQTL是指某个基因的eQTL定位到其他基因组区域，表明其他基因的差别控制该基因mRNA水平的差异。</p>
+<p>eQTL就是把基因表达作为一种性状,研究遗传突变与基因表达的相关性: 就好像研究遗传突变与身高的相关性一样</p>
+<p>早年可以通过同时做一个个体的SNP芯片和cDNA芯片, 在全基因组尺度研究突变与表达的相关性, 这种研究需要较多个体(例如1000个); 现在随着深度测序的出现,很多人开始用RNA-Seq在较少量个体中研究allele-specific expression,本质上就是eQTL.</p>
+<p>简单地说, 遗传学研究经常发现一些致病或易感突变, 这些突变怎样导致表型有时候不太直观; 所以用某个基因的差异表达作为过渡: 突变A–&gt;B基因表达变化–&gt;表型;</p>
+<h1 id="GTEx"><a href="#GTEx" class="headerlink" title="GTEx"></a>GTEx</h1><h1 id="Fine-mapping"><a href="#Fine-mapping" class="headerlink" title="Fine-mapping"></a>Fine-mapping</h1><h1 id="ancestry"><a href="#ancestry" class="headerlink" title="ancestry"></a>ancestry</h1>
+  <p><a class="classtest-link" href="/tags/Bioinfo/" rel="tag">Bioinfo</a>, <a class="classtest-link" href="/tags/PaperReading/" rel="tag">PaperReading</a>, <a class="classtest-link" href="/tags/Science/" rel="tag">Science</a> — Nov 26, 2020</p>
+  
+
+
+          <div class="row mt-2">
+  
+</div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="/js/nanobar.min.js"></script>
+  <script>
+    var options = {
+      classname: 'nanobar',
+      id: 'myNanobar'
+    };
+    var nanobar = new Nanobar(options);
+    nanobar.go(30);
+    nanobar.go(76);
+    nanobar.go(100);
+  </script>
+
+</body>
+
+</html>
